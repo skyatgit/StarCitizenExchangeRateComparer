@@ -3,10 +3,72 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:StarCitizenExchangeRateComparer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="星际公民汇率比较器" Width="640" Height="600">
+    <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Margin" Value="5,0" />
+                <Setter Property="Width" Value="300" />
+                <Setter Property="HorizontalContentAlignment" Value="Right" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Margin" Value="5,0" />
+                <Setter Property="Width" Value="100" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Margin" Value="5,0" />
+                <Setter Property="Width" Value="100" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="StackPanel">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+        </StackPanel.Resources>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="官网汇率↓↓↓↓↓" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="美元→欧元" />
+            <Label HorizontalContentAlignment="Left" Content="0.00→0.00" Name="ScUsd2EurLabel" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="美元→英镑" />
+            <Label HorizontalContentAlignment="Left" Content="0.00→0.00" Name="ScUsd2GbpLabel" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="现实汇率↓↓↓↓↓" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="美元→欧元" />
+            <Label HorizontalContentAlignment="Left" Content="0.00→0.00" Name="Usd2EurLabel" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="美元→英镑" />
+            <Label HorizontalContentAlignment="Left" Content="0.00→0.00" Name="Usd2GbpLabel" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="实际支付↓↓↓↓↓" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="官网价格(美元):" />
+            <TextBox Name="ScPriceTextBox" PreviewTextInput="CheckPriceValidPreviewTextInput" TextChanged="ScPriceTextBox_OnTextChanged" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="美元→人民币" />
+            <Label HorizontalContentAlignment="Left" Content="0.00→0.00" Name="Usd2CnyLabel" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="欧元→人民币" />
+            <Label HorizontalContentAlignment="Left" Content="0.00→0.00" Name="Eur2CnyLabel" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="英镑→人民币" />
+            <Label HorizontalContentAlignment="Left" Content="0.00→0.00" Name="Gbp2CnyLabel" />
+        </StackPanel>
 
-    </Grid>
+    </StackPanel>
 </Window>
